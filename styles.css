@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ff6445;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.logo-nav {
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+.navbar-logo img {
+    height: 90px;
+    width: 90px;
+}
+
+.navbar-logo {
+    display: flex;
+}
+
+.shop-name {
+    margin-left: 10px;
+    margin-top: 35px;
+    font-family: fantasy;
+    color: white;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: fantasy;
+
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* home section start */
+
+.home-section {
+    background-image: url(./IMAGES/ll.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    animation: backgrounds;
+    animation-duration: 3s;
+     animation-iteration-count:infinite;
+}
+
+@keyframes backgrounds {
+    30% {
+        background-image: url("./IMAGES/ll.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+        width: 100%;
+    }
+
+    60% {
+        background-image: url("./IMAGES/back.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+        width: 100%;
+    }
+
+    100% {
+        background-image: url("./IMAGES/ll.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+        width: 100%;
+    }
+}
+
+.banner-img-sm {
+    height: 300px;
+    width: 300px;
+}
+
+.content-div {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.home-title {
+    color: white;
+    font-size: 82px;
+    font-family: fantasy;
+    position: relative;
+    top: 90px;
+
+}
+
+.home-title-2 {
+    color: #ff6445;
+    font-size: 110px;
+    font-family: fantasy;
+
+}
+
+.home-para-con {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+    background-color: c;
+    text-align: center;
+    font-family: fantasy;
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding: 20px 84px;
+}
+
+.grid-parent-div {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+/* home section end */
+/* about section start */
+.about-section {
+    /* background-image: url(./IMAGES/wow.jpg); */
+    background-color: white;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 700px;
+    width: 100%;
+
+}
+
+.abt-container {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    /* margin-top: 50px; */
+
+}
+
+.container {
+    
+}
+
+.abt-div1 {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 30px;
+
+
+}
+
+.child1 {
+    background-image: url(./IMAGES/exam.jpg);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.child2 {
+    background-image: url(./IMAGES/vac.jpg);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.child3 {
+    background-image: url(./IMAGES/grom.png);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.child4 {
+    background-image: url(./IMAGES/sur.jpg);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.child5 {
+    background-image: url(./IMAGES/care.jpg);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.child6 {
+    background-image: url(./IMAGES/den.jpg);
+    height: 300px;
+    width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-con {
+    background-color: rgba(255, 100, 69, 0.6);
+    margin: 10px;
+    position: relative;
+    top: 20px;
+    border-radius: 10px;
+}
+
+.abt-titile {
+    font-size: 35px;
+    font-family: monospace;
+    font-weight: 700;
+    color: white;
+}
+
+.abt-para {
+    font-size: 18px;
+    font-family: cursive;
+    color: white;
+}
+/* about section end */

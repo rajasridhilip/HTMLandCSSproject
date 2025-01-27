@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pet shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #ff6445;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+        .nav-links a:hover{
+            color: #252b3b;
+            font-size: 18px;
+        }
+
+        .container-abt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            background-image: url(./IMAGES/dog-4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+            width: 100%;
+            animation-name: backgrounds;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes backgrounds {
+            30% {
+                background-image: url("./IMAGES/dog-1.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 700px;
+                width: 100%;
+            }
+
+            60% {
+                background-image: url("./IMAGES/dog-2.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 700px;
+                width: 100%;
+            }
+
+            100% {
+                background-image: url("./IMAGES/dog-3.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 700px;
+                width: 100%;
+            }
+        }
+
+
+        .content-abt {
+            padding: 20px;
+            /* height: 300px; */
+
+        }
+
+        .content-abt h1 {
+
+        }
+
+        .image-abt img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .abt-title {
+            font-size: 50px;
+            color: #ff6445;
+            font-family: fangsong;
+        }
+
+        .abt-title2 {
+            font-size: 50px;
+            color: #ff6445;
+            font-family: fangsong;
+        }
+
+        .abt-para-con {
+            /* height: 200px; */
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(255, 100, 69);
+            text-align: center;
+            align-items: center;
+            font-size: 22px;
+            color: white;
+            font-family: cursive;
+        }
+
+        .ourServices {
+            display: grid;
+            text-align: center;
+            align-items: center;
+            height: 150px;
+        }
+
+        .ourServices>span {
+            font-size: 50px;
+            color: #ff6445;
+            font-weight: 600;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: rgb(255, 100, 69);
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 10px 10px 25px gray;
+        }
+
+        .content p {
+            font-size: 15px;
+            font-family: fantasy;
+            color: white;
+        }
+
+        .content h2 {
+            font-size: 19px;
+            color: black;
+            font-family: inherit;
+        }
+
+        .container-serv {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-serv {
+            padding: 20px;
+            /* height: 200px; */
+            /* margin: 50px; */
+
+        }
+
+        .content-serv h1 {
+            font-size: 30px;
+            color: #ff6445;
+            font-family: system-ui;
+        }
+
+        .content-serv p {
+            font-size: 14px;
+            font-family: cursive;
+        }
+
+        .content-serv button {
+            background-color: #ff6445;
+            padding: 11px;
+            border: #ff6445 solid;
+            border-radius: 16px;
+        }
+
+        .image-serv img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container-ex {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: #ff6445;
+            align-items: center;
+        }
+
+        .content-ex {
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 23px black;
+        }
+
+        .content-ex h2 {
+            color: white;
+            font-family: fantasy;
+            letter-spacing: 1px;
+        }
+
+        .content-ex p {
+            color: white;
+            font-size: 21px;
+            font-family: fantasy;
+            letter-spacing: 1px;
+
+        }
+
+        .container-img {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-img {
+            box-shadow: 10px 10px 30px gray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-img img {
+        }
+
+        .container-pre {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-pre {
+            padding: 20px;
+        }
+
+        .content-pre h1 {
+            font-size: 41px;
+            color: #ff6445;
+        }
+
+        .content-pre p {}
+
+        .image-pre {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 105px;
+            color: darkslategrey;
+        }
+
+        .image-pre button {
+            padding: 10px 38px;
+            background: #ff6445;
+            border: solid #ff6445;
+            font-size: 16px;
+            font-family: fantasy;
+        }
+
+        /* #252b3b */
+
+        .container-ft {
+            background-color: #252b3b;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-ft {
+            padding: 20px;
+        }
+
+        .item2 {
+            display: inline-grid;
+            color: white;
+
+        }
+
+        .content-ft h1 {
+            font-size: 28px;
+            color: #ff6445;
+            font-family: sans-serif;
+        }
+
+        .content-ft p {
+            color: white;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 27px;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container-img {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container-ex {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                text-align: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                margin-top: 10px;
+                display: inline;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+
+            .container-abt {
+                grid-template-columns: 1fr;
+            }
+
+            .content-abt,
+            .image-abt {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .container-serv {
+                grid-template-columns: 1fr;
+            }
+
+            .content-serv {}
+
+            .content-serv,
+            .image-serv {
+                margin-bottom: 20px;
+            }
+
+            .container-ex {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container-img {
+                grid-template-columns: 1fr;
+            }
+
+            .container-pre {
+                grid-template-columns: 1fr;
+            }
+
+            .content-pre,
+            .image-pre {
+                margin-bottom: 20px;
+            }
+
+            .container-ft {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./IMAGES/pppp.jpg" alt="Logo">
+                <span>PET-HOUSE</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="./pricing.html">PRICING</a>
+                <a href="./about.html">ABOUT US</a>
+                <a href="#contact">SERVICES</a>
+                <a href="./contact.html">CONTACT US</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-abt">
+                <div class="content-abt">
+                    <h3 class="abt-title">WE CARE FOR</h3>
+                    <h3 class="abt-title2">YOUR PET'S</h3>
+                    <div data-aos="flip-right">
+                        <p class="abt-para-con">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                            deleniti illum laboriosam laborum consequatur voluptates tempore est, reiciendis optio
+                            accusamus nobis vitae, eaque, incidunt recusandae!</p>
+                    </div>
+                </div>
+                <div class="image-abt">
+                    <!-- <img src="image.jpg" alt="Sample Image"> -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ourServices"><span>Our Services</span></div>
+            <div class="container">
+                <div class="content item1">
+                    <img src="./IMAGES/exam.jpg" height="200px" width="300px" />
+                    <h2>DOG EXAMINATION</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione ad perferendis rerum. Laborum,
+                        dolores obcaecati.</p>
+                </div>
+                <div class="content item2">
+                    <img src="./IMAGES/den.jpg" height="200px" width="300px" />
+                    <h2>DENTAL CARE</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, perferendis.</p>
+                </div>
+                <div class="content item3">
+                    <img src="./IMAGES/grom.png" height="200px" width="300px" />
+                    <h2>DOGGY GROOMINGS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit dolorum error culpa
+                        cum consequatur doloremque accusantium?</p>
+                </div>
+                <div class="content item4">
+                    <img src="./IMAGES/vac.jpg" height="200px" width="300px" />
+                    <h2>PETS VACCINATION</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint tenetur, beatae quis
+                        exercitationem earum sit doloremque sapiente.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-serv">
+                <div class="image-serv">
+                    <img src="./IMAGES/lovecare.jpg" alt="Sample Image">
+                </div>
+                <div class="content-serv">
+                    <h1>"PET HOUSE IS CARING OUS</h1>
+                    <h1>That's why we are Naughty"</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi maxime esse velit vero, labore
+                        cumque laborum ea necessitatibus nesciunt officia.</p>
+                    <button>Learn More</button>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container-ex">
+                <div class="content-ex item1">
+                    <img src="./IMAGES/list-1.png" height="60px" width="60px" />
+                    <h2>157</h2>
+                    <p>HAPPY CATS</p>
+                </div>
+                <div class="content-ex item22">
+                    <img src="./IMAGES/list-2.png" height="60px" width="60px" />
+                    <h2>180</h2>
+                    <p>SUPER DOGS</p>
+                </div>
+                <div class="content-ex item3">
+                    <img src="./IMAGES/list-3.png" height="60px" width="60px" />
+                    <h2>89</h2>
+                    <p>AWARDS</p>
+                </div>
+                <div class="content-ex item4">
+                    <img src="./IMAGES/list-4.png" height="60px" width="60px" />
+                    <h2>15</h2>
+                    <p>BUSINESS YEARS</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ourServices"><span>From Gallery....</span></div>
+            <div class="container-img">
+                <div class="content-img item1">
+                    <img src="./IMAGES/dog-1.jpg" height="200px" width="280px" />
+                    <h2>ITALIAN PARROT</h2>
+                </div>
+                <div class="content-img item2">
+                    <img src="./IMAGES/dog-2.jpg" height="200px" width="280px" />
+                    <h2>SIBERIAN HUSKY</h2>
+                </div>
+                <div class="content-img item3">
+                    <img src="./IMAGES/dog-3.jpg" height="200px" width="280px" />
+                    <h2>RUSSIAN HORTAYA</h2>
+                </div>
+                <div class="content-img item4">
+                    <img src="./IMAGES/dog-4.jpg" height="200px" width="280px" />
+                    <h2>GERMAN SHEPHERED</h2>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-pre">
+                <div class="image-pre">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div class="content-pre">
+                    <h1>Premium Pet Insurance</h1>
+                    <p>Insurance Includes Free Customer Support</p>
+                </div>
+                <div class="image-pre">
+                    <button>learn more</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="container-ft">
+                <div class="content-ft item1">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta at consequatur natus iure
+                        omnis harum ab ipsam, explicabo deleniti sequi, incidunt nisi sed officiis debitis commodi
+                        laborum!</p>
+                    <div class="logo">
+                        <img src="./IMAGES/pppp.jpg" alt="Logo">
+                        <h1>PET-HOUSE</h1>
+                    </div>
+                </div>
+                <div class="content-ft item2">
+                    <h1>Latest News</h1>
+                    <span>Beginners</span>
+                    <span>Getting Help</span>
+                    <span>Getting Started</span>
+                    <span>Joomla!</span>
+                    <span>Options</span>
+                </div>
+                <div class="content-ft item3">
+                    <h1>Photo stream</h1>
+                    <div class="img-stream">
+                        <img src="./IMAGES/dog-1.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-2.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-3.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-4.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-1.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-2.jpg" height="80px" width="80px" />
+                    </div>
+                </div>
+                <div class="content-ft item4">
+                    <h1>Keep In Touch</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quaerat laborum sequi nesciunt
+                        labore nam laboriosam. Blanditiis iste accusamus in.</p>
+                    <p><i class="fa-regular fa-envelope"></i>infomysite@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>Ph : 123-456-7890</p>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

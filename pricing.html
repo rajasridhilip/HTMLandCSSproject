@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #ff6445;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .container-ft {
+            background-color: #252b3b;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-ft {
+            padding: 20px;
+        }
+
+        .item2 {
+            display: inline-grid;
+            color: white;
+
+        }
+
+        .content-ft h1 {
+            font-size: 28px;
+            color: #ff6445;
+            font-family: sans-serif;
+        }
+
+        .content-ft p {
+            color: white;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 27px;
+        }
+
+        .container-tt {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-tt {
+            padding: 20px;
+        }
+
+        .content-tt h1 {
+            display: grid;
+            justify-content: center;
+            font-size: 32px;
+            color: #ff6445;
+        }
+
+        .content-tt p {}
+
+        .container-ppp {
+            background-color: #ff6445;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-ppp {
+            background-color: #252b3b;
+            padding: 20px;
+            /* border: 1px solid #ddd; */
+            text-align: center;
+            width: 200px;
+            height: 400px;
+        }
+        .content-ppp:hover{
+            height: 410px;
+            width: 210px;
+        }
+
+        .content-ppp h2 {
+            font-size: 30px;
+            color:#ff6445;
+            font-family: none;
+        }
+
+        .content-ppp h3 {
+            color: white;
+        }
+
+        .content-ppp p {
+            color: white;
+        }
+
+        .content-ppp button {
+            background-color: #ff6445;
+            padding: 10px 20px;
+            border: solid #ff6445;
+            font-size: 13px;
+            font-family: fantasy;
+            color: white;
+        }
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container-pp {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container-pp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                text-align: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                margin-top: 10px;
+                display: inline;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+
+            .container-ft {
+                grid-template-columns: 1fr;
+            }
+
+            .container-tt {
+                grid-template-columns: 1fr;
+            }
+
+            .container-ppp {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 1024px) {
+            .container-ft {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container-ppp {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./IMAGES/pppp.jpg" alt="Logo">
+                <span>PET-HOUSE</span>
+            </div>
+            <nav class="nav-links">
+                <a href="./index1.html">HOME</a>
+                <a href="#about">PRICING</a>
+                <a href="./about.html">ABOUT US</a>
+                <a href="#contact">SERVICES</a>
+                <a href="./contact.html">CONTACT US</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-tt">
+                <div class="content-tt">
+                    <h1>Dog Boarding Pricing</h1>
+                </div>
+                <div class="content-tt">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos laudantium assumenda magni
+                        tempora, soluta, a voluptatibus voluptatum impedit iure at id amet.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-ppp">
+                <div class="content-ppp item1">
+                    <h2>Basic Plan</h2>
+                    <img src="./IMAGES/p-1.png" height="60px" width="60px" />
+                    <h3>$12 Per day</h3>
+                    <p>3 times full diet</p>
+                    <p>Medical Checkup</p>
+                    <p>Daily Cleaning</p>
+                    <p>Extra Activities</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="content-ppp item23">
+                    <h2>Medium Plan</h2>
+                    <img src="./IMAGES/p-2.png" height="60px" width="60px" />
+                    <h3>$12 Per day</h3>
+                    <p>3 times full diet</p>
+                    <p>Medical Checkup</p>
+                    <p>Daily Cleaning</p>
+                    <p>Extra Activities</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="content-ppp item3">
+                    <h2>Pro Plan</h2>
+                    <img src="./IMAGES/p-3.png" height="60px" width="60px" />
+                    <h3>$12 Per day</h3>
+                    <p>3 times full diet</p>
+                    <p>Medical Checkup</p>
+                    <p>Daily Cleaning</p>
+                    <p>Extra Activities</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="content-ppp item4">
+                    <h2>VIP Plan</h2>
+                    <img src="./IMAGES/p-4.png" height="60px" width="60px" />
+                    <h3>$12 Per day</h3>
+                    <p>3 times full diet</p>
+                    <p>Medical Checkup</p>
+                    <p>Daily Cleaning</p>
+                    <p>Extra Activities</p>
+                    <button>Order Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <div class="container-ft">
+                <div class="content-ft item1">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dicta at consequatur natus iure
+                        omnis harum ab ipsam, explicabo deleniti sequi, incidunt nisi sed officiis debitis commodi
+                        laborum!</p>
+                    <div class="logo">
+                        <img src="./IMAGES/pppp.jpg" alt="Logo">
+                        <h1>PET-HOUSE</h1>
+                    </div>
+                </div>
+                <div class="content-ft item2">
+                    <h1>Latest News</h1>
+                    <span>Beginners</span>
+                    <span>Getting Help</span>
+                    <span>Getting Started</span>
+                    <span>Joomla!</span>
+                    <span>Options</span>
+                </div>
+                <div class="content-ft item3">
+                    <h1>Photo stream</h1>
+                    <div class="img-stream">
+                        <img src="./IMAGES/dog-1.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-2.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-3.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-4.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-1.jpg" height="80px" width="80px" />
+                        <img src="./IMAGES/dog-2.jpg" height="80px" width="80px" />
+                    </div>
+                </div>
+                <div class="content-ft item4">
+                    <h1>Keep In Touch</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quaerat laborum sequi nesciunt
+                        labore nam laboriosam. Blanditiis iste accusamus in.</p>
+                    <p><i class="fa-regular fa-envelope"></i>infomysite@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>Ph : 123-456-7890</p>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
+
+
+</body>
+
+</html>
